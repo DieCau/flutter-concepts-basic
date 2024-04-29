@@ -29,6 +29,12 @@ class HomePage extends StatelessWidget {
               }, 
               child: const Text('Consumir una API'),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/theme');
+              }, 
+              child: const Text('Ir a Themes'),
+            ),
           ],
         ),
       ),

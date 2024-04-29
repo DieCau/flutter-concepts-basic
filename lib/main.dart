@@ -25,6 +25,7 @@ class _MyAppState extends State<MyApp> {
         '/otra':(context) => const OtraPage(),
         '/custom':(context) => const CustomPage(),
         '/api':(context) => const ApiPage(),
+        '/theme':(context) => const ThemesPage(),
       },
     );
   }
