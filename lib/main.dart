@@ -1,4 +1,4 @@
-import 'package:concepts_basic/config/theme/app_theme.dart';
+import 'package:concepts_basic/config/theme/themes.dart';
 import 'package:flutter/material.dart';
 import './src/routes/routes.dart';
 
@@ -17,7 +17,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: AppTheme().getTheme(),
+      theme: CustomTheme.lightTheme,
+      darkTheme: CustomTheme.darkTheme,
+      themeMode: currentTheme.currentTheme,
       title: 'Routes App',
       initialRoute: '/',
       routes: {
