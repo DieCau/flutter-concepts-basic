@@ -1,5 +1,5 @@
-import 'package:concepts_basic/config/theme/themes.dart';
 import 'package:flutter/material.dart';
+import 'package:concepts_basic/config/theme/themes.dart';
 
 class ThemesPage extends StatefulWidget {
   const ThemesPage({super.key});
@@ -27,7 +27,9 @@ class _ThemesPageState extends State<ThemesPage> {
         actions: [
           IconButton(
             icon: const Icon(Icons.sunny),
-            onPressed: (){},
+            onPressed: (){
+              currentTheme.toggleTheme();
+            },
           )
         ],
       ),

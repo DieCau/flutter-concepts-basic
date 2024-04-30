@@ -4,7 +4,7 @@ CustomTheme currentTheme = CustomTheme();
 
 class CustomTheme with ChangeNotifier {
 
-  static bool _isDarkTheme = true;
+  static bool _isDarkTheme = false;
   ThemeMode get currentTheme => _isDarkTheme ? ThemeMode.dark : ThemeMode.light;
 
   void toggleTheme() {
@@ -17,8 +17,11 @@ class CustomTheme with ChangeNotifier {
       primaryColor: Colors.lightBlue,
       scaffoldBackgroundColor: Colors.white,
       textTheme: const TextTheme(
-        headlineMedium: TextStyle(color: Colors.black)
-      )
+        displayLarge: TextStyle(color: Colors.black),
+        displayMedium: TextStyle(color: Colors.black),
+        bodyLarge: TextStyle(color: Colors.black),
+        bodyMedium: TextStyle(color: Colors.black),
+      ),
     );
   }
 
@@ -27,9 +30,11 @@ class CustomTheme with ChangeNotifier {
       primaryColor: Colors.black,
       scaffoldBackgroundColor: Colors.grey,
       textTheme: const TextTheme(
-        headlineMedium: TextStyle(color: Colors.white)
-      )
-
+        displayLarge: TextStyle(color: Colors.white),
+        displayMedium: TextStyle(color: Colors.white),
+        bodyLarge: TextStyle(color: Colors.white),
+        bodyMedium: TextStyle(color: Colors.white),
+      ),
     );
   }
 
